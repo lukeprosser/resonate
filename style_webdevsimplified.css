@@ -62,35 +62,75 @@ section.top {
 }
 
 header .container {
-  position: relative; /* Navigation reference */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 0 0;
-}
-
-h1.brand {
-  text-transform: uppercase;
-  letter-spacing: 3px;
+  
 }
 
 /* Navigation */
-nav ul {
+.navbar {
+  /* position: relative; */
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  list-style: none;
-}
-
-nav ul li {
-  padding-left: 2rem;
+  color: #fff;
   text-transform: uppercase;
 }
 
-nav ul li a {
+.brand-title {
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+}
+
+.navbar-links {
+  /* display: none; */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.navbar-links ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar-links li {
+  list-style: none;
+  font-size: 1rem;
+}
+
+.navbar-links li a {
+  display: block;
+  padding: 1rem;
   text-decoration: none;
   color: #fff;
 }
+
+.navbar-links li a:hover {
+  color: #ddd;
+}
+
+.toggle-btn {
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-btn .bar {
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+
+
 
 .hero .container {
   position: relative;
@@ -120,12 +160,12 @@ nav ul li a {
 /* About */
 .about .container {
   position: relative;
-  min-height: 50vh;
+  min-height: 100vh;
 }
 
 .about-inner {
   position: absolute;
-  top: 40%;
+  top: 50%;
   width: 100%;
   transform: translateY(-50%);
   display: flex;
@@ -159,9 +199,6 @@ nav ul li a {
 .services {
   position: relative;
   overflow: hidden; /* Prevent blur on section edges */
-  clip-path: polygon(0 7vw, 100% 0, 100% calc(100% - 7vw), 0 100%);
-  margin-top: -7vw;
-  margin-bottom: -7vw;
 }
 
 .services .container {
@@ -204,12 +241,12 @@ nav ul li a {
 /* Testimonials */
 .testimonials .container {
   position: relative;
-  min-height: 50vh;
+  min-height: 100vh;
 }
 
 .testimonials-inner {
   position: absolute;
-  top: 60%;
+  top: 50%;
   width: 100%;
   transform: translateY(-50%);
   display: flex;

@@ -120,12 +120,12 @@ nav ul li a {
 /* About */
 .about .container {
   position: relative;
-  min-height: 50vh;
+  min-height: 100vh;
 }
 
 .about-inner {
   position: absolute;
-  top: 40%;
+  top: 50%;
   width: 100%;
   transform: translateY(-50%);
   display: flex;
@@ -159,9 +159,6 @@ nav ul li a {
 .services {
   position: relative;
   overflow: hidden; /* Prevent blur on section edges */
-  clip-path: polygon(0 7vw, 100% 0, 100% calc(100% - 7vw), 0 100%);
-  margin-top: -7vw;
-  margin-bottom: -7vw;
 }
 
 .services .container {
@@ -204,12 +201,12 @@ nav ul li a {
 /* Testimonials */
 .testimonials .container {
   position: relative;
-  min-height: 50vh;
+  min-height: 100vh;
 }
 
 .testimonials-inner {
   position: absolute;
-  top: 60%;
+  top: 50%;
   width: 100%;
   transform: translateY(-50%);
   display: flex;
