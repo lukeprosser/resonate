@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 
+/* Global */
 :root {
-  --primary: #6BBFBF;
-  --dark: #0E3259;
-  --text-color: #c5bbec;
+  --primary: #5DA6A6;
+  --secondary: #244040;
+  --dark: #011F26;
+  --overlay: rgba(24, 39, 51, 0.85);
+  --menu-speed: 0.75s;
 }
 
 * {
@@ -24,12 +27,28 @@ body, html {
   margin: 0 auto;
 }
 
+.btn {
+  display: inline-block;
+  background: none;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  padding: 0.5rem 0.7rem;
+  color: #fff;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+}
+
+/* Top */
 section.top {
   background: rgba(0, 0, 0, 0.25);
   color: #fff;
   position: relative;
   overflow: hidden;
-  min-height: 50vh;
+  min-height: 100vh;
 }
 
 .video-bg {
@@ -54,68 +73,178 @@ h1.brand {
   letter-spacing: 3px;
 }
 
-nav ul {
-  display: flex;
-  list-style: none;
-  text-transform: uppercase;
-}
-
 .hero .container {
   position: relative;
-  min-height: 50vh;
+  min-height: 100vh;
 }
 
-.hero-text {
+.hero-inner {
   position: absolute;
   top: 50%;
   width: 100%;
   transform: translateY(-50%);
 }
 
-.hero-text h2 {
-  margin-bottom: 2rem;
+.hero-inner h2 {
   font-size: 2rem;
 }
 
-.hero-text .btn {
-  background: none;
-  border: 1px solid #fff;
-  border-radius: 3px;
-  padding: 0.7rem;
-  color: #fff;
-  font-family: inherit;
-  font-size: 0.9rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  transition: all 200ms ease-in-out;
+.hero-inner .btn {
+  margin-top: 2rem;
 }
-.hero-text .btn:hover {
+
+.hero-inner .btn:hover {
   background: var(--primary);
   border: 1px solid var(--primary);
 }
 
-.featured-services {
-  display: flex;
-  justify-content: space-between;
-  margin: 3rem 0;
+/* About */
+.about .container {
+  position: relative;
+  min-height: 100vh;
 }
 
-.featured-services .card {
-  background: rgba(107, 191, 191, 0.3);
+.about-inner {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  display: flex;
+  /* justify-content: space-evenly; */
+  align-items: center;
+}
+
+.about .container h3 {
+  flex: 2;
+}
+
+.about .container p {
+  flex: 2;
+  padding: 3rem;
+}
+
+/* Services */
+.services::before {
+  position: absolute;
+  content: '';
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url('assets/office.jpg') no-repeat center center/cover;
+  filter: grayscale(50%) blur(2px) brightness(50%);
+  transform: scale(1.03); /* Prevent blur on section edges */
+}
+
+.services {
+  position: relative;
+  overflow: hidden; /* Prevent blur on section edges */
+}
+
+.services .container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.services-inner {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+}
+
+.services-inner .card {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid #fff;
+  border-radius: 3px;
   margin: 0 1rem;
   padding: 1.5rem;
+  color: #fff;
   text-align: center;
 }
 
-.featured-services i {
+.services-inner i {
   margin-bottom: 1rem;
-  font-size: 2.5rem;
+  font-size: 1.8rem;
 }
 
-.featured-services h3 {
+.services-inner h3 {
   margin-bottom: 0.5rem;
 }
 
-.featured-services p {
-  font-weight: 200;
+.services-inner p {
+  font-weight: 300;
+}
+
+/* Testimonials */
+.testimonials .container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.testimonials-inner {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.testimonial {
+  padding: 2rem;
+}
+
+.quote {
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.contact {
+  background: var(--primary);
+  color: #fff;
+}
+
+.contact .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.7rem 0;
+}
+
+.contact .container > * {
+  margin: 0 2rem;
+}
+
+.contact .container .btn:hover {
+  background: var(--secondary);
+  border: 1px solid var(--secondary);
+}
+
+/* Footer */
+footer {
+  background: var(--dark);
+  color: #fff;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+
+footer .container .license {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.social i {
+  margin: 0 1rem;
+  font-size: 1.3rem;
 }
