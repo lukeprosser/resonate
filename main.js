@@ -1,30 +1,46 @@
 const faders = document.querySelectorAll('.fade-in');
 const sliders = document.querySelectorAll('.slide-in');
 
-const appearOptions = {
+const slideOptions = {
   threshold: 0,
-  rootMargin: '0px 0px -100px 0px'
+  rootMargin: '0px 0px -50px 0px'
 };
 
-const appearOnScroll = new IntersectionObserver(function(
+const slideOnScroll = new IntersectionObserver(function(
   entries,
-  appearOnScroll
+  slideOnScroll
 ) {
   entries.forEach(entry => {
     if (!entry.isIntersecting) {
       entry.target.classList.remove('appear');
-      // return;
     } else {
       entry.target.classList.add('appear');
-      appearOnScroll.unobserve(entry.target);
     }
   })
-}, appearOptions);
-
-faders.forEach(fader => {
-  appearOnScroll.observe(fader);
-});
+}, slideOptions);
 
 sliders.forEach(slider => {
-  appearOnScroll.observe(slider);
+  slideOnScroll.observe(slider);
+});
+
+const fadeOptions = {
+  threshold: 0,
+  rootMargin: '0px 0px -200px 0px'
+};
+
+const fadeOnScroll = new IntersectionObserver(function(
+  entries,
+  fadeOnScroll
+) {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) {
+      entry.target.classList.remove('appear');
+    } else {
+      entry.target.classList.add('appear');
+    }
+  })
+}, fadeOptions);
+
+faders.forEach(fader => {
+  fadeOnScroll.observe(fader);
 });
