@@ -116,6 +116,7 @@ p {
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 3px;
+  font-weight: 400;
 }
 
 /* Top > Hero */
@@ -130,7 +131,6 @@ p {
 .top .hero .container .hero-inner {
   margin-top: -10vh;
   height: 100%;
-  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -152,22 +152,32 @@ p {
 }
 
 .about .container .about-inner {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.about .container .about-inner > * {
+  width: 100%;
 }
 
 .about .container .about-inner h3 {
- font-size: 1.3rem;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
 }
+
+.about .container .about-inner p {
+  font-weight: 300;
+ }
 
 /* Strategy */
 .strategy .container .strategy-inner {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .strategy .container .strategy-inner h3 {
   font-size: 1.3rem;
+  letter-spacing: 1px;
 }
 
 .strategy .container .strategy-inner h4 {
@@ -176,6 +186,11 @@ p {
   padding-bottom: 0.6rem;
   border-bottom: 4px solid var(--primary);
   font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.strategy .container .strategy-inner p {
+  font-weight: 300;
 }
 
 /* Services */
@@ -199,8 +214,8 @@ p {
 }
 
 .services .container .services-inner {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
 }
 
 .services .container .services-inner .card {
@@ -208,7 +223,7 @@ p {
   background: rgba(0, 0, 0, 0.4);
   border: 1px solid #fff;
   border-radius: 3px;
-  padding: 1rem 0.6rem;
+  padding: 2rem 0.6rem 1rem;
   color: #fff;
   text-align: center;
 }
@@ -219,4 +234,265 @@ p {
 
 .services .container .services-inner .card h3 {
   margin-bottom: 0.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.services .container .services-inner .card p {
+  font-weight: 300;
+}
+
+/* Values */
+.values .container .values-inner {
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+}
+
+.values .container .values-inner h3 {
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
+.values .container .values-inner h4 {
+  width: 70%;
+  margin-bottom: 1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 4px solid var(--primary);
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.values .container .values-inner p {
+  font-weight: 300;
+}
+
+/* Testimonials */
+.testimonials {
+  background: var(--offwhite);
+}
+
+.testimonials .container .testimonials-inner {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.testimonials .container .testimonials-inner .testimonial {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.testimonials .container .testimonials-inner .testimonial .testimonial-quote {
+  font-style: italic;
+  font-weight: 300;
+  margin-bottom: 0.7rem;
+}
+
+.testimonials .container .testimonials-inner .testimonial .testimonial-name {
+  margin-bottom: 0;
+}
+
+/* Contact */
+.contact {
+  background: var(--primary);
+  color: #fff;
+  text-align: center;
+}
+
+.contact .container .contact-inner {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact .container .contact-inner .btn:hover {
+  background: var(--secondary);
+  border: 1px solid var(--secondary);
+}
+
+/* Footer */
+.footer {
+  background: var(--dark);
+  color: #fff;
+  text-align: center;
+}
+
+.footer .container .footer-inner {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer .container .footer-inner .license {
+  margin-bottom: 0;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.footer .container .footer-inner .social i {
+  margin: 1rem;
+  font-size: 1.2rem;
+}
+
+/* Tablet */
+@media (min-width: 700px) {
+  /* Top > Hero */
+  .top .hero .container .hero-inner {
+    align-items: flex-start;
+  }
+
+  /* About */
+  .about .container .about-inner {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .about .container .about-inner > * {
+    padding: 1rem;
+  }
+
+  /* Strategy */
+  .strategy .container .strategy-inner {
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+  }
+
+  .strategy .container .strategy-inner h3 {
+    text-align: center;
+    font-size: 1.6rem;
+  }
+
+  .strategy .container .strategy-inner .steps {
+    display: flex;
+  }
+
+  .strategy .container .strategy-inner .steps .step {
+    padding: 1rem;
+  }
+
+  /* Services */
+  .services .container .services-inner {
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    display: flex;
+  }
+
+  .services .container .services-inner .card {
+    width: 100%;
+    margin: 0.5rem;
+    padding: 2rem 1rem;
+  }
+
+  .services .container .services-inner .card h3 {
+    font-size: 1rem;
+  }
+
+  .services .container .services-inner .card p {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+  }
+
+  /* Values */
+  .values .container .values-inner {
+    margin-top: 4rem;
+    margin-bottom: 6rem;
+  }
+
+  .values .container .values-inner h3 {
+    text-align: center;
+    font-size: 1.6rem;
+  }
+
+  .values .container .values-inner .values-grid {
+    display: flex;
+  }
+
+  .values .container .values-inner .values-grid .value {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  /* Testimonials */
+  .testimonials {
+    background: var(--offwhite);
+  }
+
+  .testimonials .container .testimonials-inner {
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+    display: flex;
+  }
+
+  .testimonials .container .testimonials-inner .testimonial {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  /* Contact */
+  .contact .container .contact-inner {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact .container .contact-inner p {
+    margin-bottom: 0;
+    font-size: 1.2rem;
+  }
+
+  .contact .container .contact-inner > * {
+    margin: 0 2rem;
+  }
+
+  /* Footer */
+  .footer .container .footer-inner {
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/* Desktop */
+@media (min-width: 900px) {
+  /* About */
+  .about .container .about-inner > * {
+    padding: 1.5rem;
+  }
+
+  /* Strategy */
+  .strategy .container .strategy-inner .steps .step {
+    padding: 2rem;
+  }
+
+  /* Services */
+  .services .container .services-inner {
+    margin-top: 15rem;
+    margin-bottom: 15rem;
+  }
+
+  .services .container .services-inner .card {
+    margin: 1rem;
+  }
+
+  .services .container .services-inner .card h3 {
+    font-size: 1.3rem;
+  }
+
+  .services .container .services-inner .card p {
+    font-size: 1rem;
+  }
+
+  /* Values */
+  .values .container .values-inner .values-grid .value {
+    padding: 2rem;
+  }
+
+  /* Testimonials */
+  .testimonials .container .testimonials-inner .testimonial {
+    padding: 2rem;
+  }
 }
