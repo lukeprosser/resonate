@@ -1,4 +1,21 @@
-const faders = document.querySelectorAll('.fade-in');
+// Navigation
+const menuIcon = document.querySelector('.hamburger-menu');
+const nav = document.querySelector('nav');
+const navLink = document.querySelectorAll('.nav-link');
+
+menuIcon.addEventListener('click', () => {
+  nav.classList.toggle('nav-shift');
+  menuIcon.classList.toggle('line-transition');
+});
+
+navLink.forEach(link => {
+  link.addEventListener('click', () => {
+    nav.classList.toggle('nav-shift');
+    menuIcon.classList.toggle('line-transition');
+  });
+});
+
+// Slide in elements
 const sliders = document.querySelectorAll('.slide-in');
 
 const slideOptions = {
@@ -22,6 +39,9 @@ const slideOnScroll = new IntersectionObserver(function(
 sliders.forEach(slider => {
   slideOnScroll.observe(slider);
 });
+
+// Fade in elements
+const faders = document.querySelectorAll('.fade-in');
 
 const fadeOptions = {
   threshold: 0,
