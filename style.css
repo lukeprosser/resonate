@@ -35,7 +35,7 @@ p {
 .container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .btn {
@@ -135,6 +135,7 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .top .hero .container .hero-inner h2 {
@@ -332,6 +333,14 @@ p {
   font-size: 1.2rem;
 }
 
+/* Small Tablet */
+@media (min-width: 500px) {
+  /* Services */
+  .services .container {
+    max-width: 60%;
+  }
+}
+
 /* Tablet */
 @media (min-width: 700px) {
   /* Top > Hero */
@@ -371,6 +380,10 @@ p {
   }
 
   /* Services */
+  .services .container {
+    max-width: 1100px;
+  }
+
   .services .container .services-inner {
     margin-top: 10rem;
     margin-bottom: 10rem;
