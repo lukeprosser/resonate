@@ -15,6 +15,7 @@ navLink.forEach(link => {
   });
 });
 
+
 // Slide in elements
 const sliders = document.querySelectorAll('.slide-in');
 
@@ -39,6 +40,7 @@ const slideOnScroll = new IntersectionObserver(function(
 sliders.forEach(slider => {
   slideOnScroll.observe(slider);
 });
+
 
 // Fade in elements
 const faders = document.querySelectorAll('.fade-in');
